@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Sweetalert -->
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+        <!-- my style -->
+        <link rel="stylesheet" href="style.css">
+
+
+        <title>TI-NGITUNG LUAS DAN VOLUME</title>
+    </head>
+    <body>
+
+        <!-- nama aplikasi -->
+        <h1 class="text-center">UMC-ITUNG</h1>
+
+        <!-- ucapan selamat datang kepada useer -->
+        <h3 id="name" class="text-center"></h3>
+
+            <!-- grid sistem dari bootstrap -->
+            <div class="row justify-content-center">
+
+            <!-- jumlah grid yang di gunakan -->
+            <div class="col-md-8">
+
+                <!-- card -->
+                <div class="card mb-3 box-color">
+
+                    <div class="row no-gutters">
+
+                        <!-- logo di sebelah kiri form -->
+                        <div class="col-md-4">
+                            <img src="UMC-1.png" class="card-img" alt="...">
+                        </div>
+                        <!-- akhir logo di sebelah kiri form -->
+
+                        <!-- form input -->
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon3">Jenis bangun apa yang ingin &nbsp;<span id="name1"></span> &nbsp; hitung  hari ini ?</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="pilihanku" aria-describedby="basic-addon3">
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon3"> Bangun  &nbsp; <span id="pilihanku1"></span> &nbsp; apa yang ingin &nbsp; <span id="name2"></span> &nbsp; hitung </span>
+                                            </div>
+                                            <input type="text" class="form-control" id="pilihanku2" aria-describedby="basic-addon3">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon3"> Apa yang ingin kamu hitung di bangun  &nbsp; <span id="pilihanku3"></span>? </span>
+                                            </div>
+                                            <input type="text" class="form-control" id="pilihanku4" aria-describedby="basic-addon3">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="row pb-3">
+                                            <div class="col">
+                                                <label for="" class="hiden" id="labelPanjang">Panjang</label>
+                                                <input type="text" class="form-control hiden" placeholder="Panjang" id="panjang">
+                                            </div>
+                                            
+                                            <div class="col">
+                                                <label for="" class="hiden" id="labelLebar">Lebar</label>
+                                                <input type="text" class="form-control hiden" placeholder="Lebar" id="lebar">
+                                            </div>
+                                            
+                                            <div class="col">
+                                                <label for="" class="hiden" id="labelTinggi">Tinggi</label>
+                                                <input type="text" class="form-control hiden" placeholder="Tinggi" id="tinggi">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row pb-3">
+                                            <div class="col">
+                                                <label for="" class="hiden" id="labelJari2">Jari - jari </label>
+                                                <input type="text" class="form-control hiden" placeholder="Jari - jari" id="jari2">
+                                            </div>
+                                            <div class="col">
+                                                <label for="" class="hiden" id="labelDiameter">Diameter</label>
+                                                <input type="text" class="form-control hiden" placeholder="Diameter" id="diameter">
+                                            </div>
+                                        </div>
+                                        
+                                        <button type="button" class="btn btn-outline-primary btn-lg btn-block cw" onclick="hitung()">Hitung</button>
+                                    </div>
+                                </div>
+                        
+                                
+                        
+                            </div>
+
+                        </div>
+                        <!-- akhir form input -->
+                        
+                    </div>
+
+                </div>
+                <!-- akhir card -->
+
+            </div>
+            </div>
+
+            <h1 id="demo"></h1>
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    
+
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    
+    <script src="myscript.js"></script>    
+
+    </body>
+</html>
